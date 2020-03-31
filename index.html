@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="fixed-top navbar-container backdrop">
+        <div class="container">
+            <nav class="nav navbar navbar-expand-md" id="mainNav">
+                <div class="menu-left col-md-4 d-none d-md-block">
+                    <ul class="menu navbar-nav">
+                        <li class="nav-item active">
+                            <router-link class="nav-link" to="/">Home</router-link>
+                        </li>
+                        <li class="nav-item active">
+                            <router-link class="nav-link" to="/blog">Blog</router-link>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a class="navbar-brand menu-icon" rel="dns-prefetch" href="https://renggaprakosonugroho.my.id/">
+                        <!-- <img alt="Rengga Nugroho's logo" src="/img/name-logo-long.svg" width="auto" height="32px"> -->Gabut.id
+                    </a>
+                </div>
+                <div class="menu-right col-md-4 d-none d-md-block">
+                    <ul class="menu navbar-nav">
+                        <li class="nav-item active">
+                            <router-link class="nav-link" to="/gallery">Gallery</router-link>
+                        </li>
+                        <li class="nav-item active">
+                            <router-link class="nav-link" to="/about">About</router-link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <nav id="toolbarm" class="tabbar nav backdrop fixed-bottom d-block d-md-none">
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="col">
+                    <router-link class="nav-link" to="/">Home</router-link>
+                </div>
+                <div class="col">
+                    <router-link class="nav-link" to="/blog">Blog</router-link>
+                </div>
+                <div class="col">
+                    <router-link class="nav-link" to="/gallery">Gallery</router-link>
+                </div>
+                <div class="col">
+                    <router-link class="nav-link" to="/about">About</router-link>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero row align-items-center justify-content-center">
+            <div class="col-12 col-lg-8 text-center">
+                <h1 class="mb-lem">{{title}}</h1>
+                <p>{{desc}}</p>
+                <button class="btn-big">CEK KEGIATAN</button>
+            </div>
+        </section>
+    </div>
+
+
+    <section id="artikel-section container-fluid">
+        <div id="container">
+            <h1 class="title-section">Apa saja yang dapat kamu lakukan?</h1>
+            <div id="artikel-1" class="card artikel">
+                <div class="container">
+                    <h3>Masak Batu</h3>
+                    <p>Difficulty dan Lainnya</p>
+                </div>
+            </div>
+            <div id="artikel-1" class="card artikel">
+                <div class="container">
+                    <h3>Masak Batu</h3>
+                    <p>Difficulty dan Lainnya</p>
+                </div>
+            </div>
+            <button class="btn-big" type="submit">KEGIATAN LAINNYA</button>
+        </div>
+    </section>
+
+    <section id="artikel-section container-fluid">
+        <div id="container">
+            <h1 class="title-section">Apa saja yang dapat kamu lakukan?</h1>
+            <div id="artikel-1" class="card artikel">
+                <div class="container">
+                    <h3>Masak Batu</h3>
+                    <p>Difficulty dan Lainnya</p>
+                </div>
+            </div>
+            <div id="artikel-1" class="card artikel">
+                <div class="container">
+                    <h3>Masak Batu</h3>
+                    <p>Difficulty dan Lainnya</p>
+                </div>
+            </div>
+            <button class="btn-big" type="submit">KEGIATAN LAINNYA</button>
+        </div>
+    </section>
+
+
+    <section id="category">
+        <div class="row">
+            <div class="column">
+              <div class="card">Batu Rocky</div>
+            </div>
+            <div class="column">
+              <div class="card">Siput Sponbob</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <div class="card">Batu Rocky</div>
+            </div>
+            <div class="column">
+              <div class="card">Siput Sponbob</div>
+            </div>
+          </div>
+    </section>
+
+    <div class="row align-items-center">
+        <div class="col-sm-6 col-md-4 order-2 order-md-1 footer-copyright align-self-center"></div>
+        <div class="col-sm-6 col-md-4 order-1 order-md-2 footer-made text-center">Gabut.id</div>
+        <div class="col-sm-6 col-md-4 order-3 order-md-3 footer-social align-self-center">
+            <span v-for="(item,i) in info.socialMedia" :key="i">
+                <a :href="item.link" rel="noreferrer" target="_blank"><i :class="item.icon"></i>
+                </a>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>
